@@ -1,0 +1,23 @@
+img {
+  width: 100%;
+  border-radius: 4vw;
+}
+.partners {
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.partners .card {
+  width: 18%;
+  transition: transform ease 0.2s;
+}
+.partners .card:hover {
+  transform: scale(1.05);
+  transition: transform ease 0.4s;
+  color: #111;
+}
+.partners a {
+  color: #888;
+  text-decoration: none;
+}
