@@ -1,0 +1,27 @@
+/* Fonts CSS */
+
+/* шрифт Helvetica */
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/helvetica_regular.otf") format(opentype);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/helvetica_bold.otf") format(opentype);
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/helvetica_light.otf") format(opentype);
+  font-weight: 400;
+  font-style: light;
+}
+
+/* Применение шрифта к элементам */
+body {
+  font-family: "Helvetica";
+}

@@ -2,24 +2,43 @@
   box-sizing: border-box;
 }
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 400;
-  background-color: #eee;
-}
-h1 {
-  font-size: 48px;
-  line-height: 58px;
-  font-weight: 700;
+  background-color: #ffffff;
+  max-width: 95vw;
+  /* overflow: hidden; */
 }
 
+h1 {
+  font-size: 22vw;
+  /* line-height: auto; */
+  font-style: normal;
+  color: #eeebeb;
+}
+h2 {
+  font-size: 15.6vw;
+  /* line-height: 46px; */
+  font-style: normal;
+  color: #eeebeb;
+}
+h3 {
+  font-size: 10vw;
+  /* line-height: 32px; */
+  font-style: normal;
+  color: #363636;
+}
+h4 {
+  font-size: 10vw;
+  /* line-height: auto; */
+  font-style: normal;
+  color: #9c9c9c;
+}
 a {
-  font-size: 16px;
-  line-height: 21px;
+  font-size: 1.56vw;
+  line-height: 1.5vw;
 }
 section {
   max-width: 100vw;
   margin: 4vw auto;
+  /* overflow: hidden; */
 }
 section > h1 {
   padding-left: 4vw;
@@ -30,13 +49,18 @@ section > p {
 }
 /* навигация */
 nav {
-  width: 100%;
-  border-bottom: 1px solid #888;
+  z-index: 100;
+  width: 93vw;
+  border-bottom-left-radius: 1.5vw;
+  border-bottom-right-radius: 1.5vw;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   position: fixed;
+  /* justify-content: center; */
   top: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255 0.4);
-  backdrop-filter: blur(50px);
+  left: 3.5vw;
+  /* background-color: rgba(245, 245, 245 0.8); */
+  background-color: #f5f5f5;
+  backdrop-filter: blur(75px);
 }
 .main-menu {
   max-width: 1280px;
@@ -62,3 +86,9 @@ nav {
   transition: all ease 0.4s;
 }
 /* ffkfk */
+p {
+  font-size: 1.8vw;
+  /* line-height: 32px; */
+  font-style: normal;
+  color: #363636;
+}

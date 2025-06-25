@@ -2,3 +2,380 @@
   width: 3vw;
   height: 2vw;
 }
+/* body::after {
+  content: "";
+  background-image: url(../images/MacBook\ Air\ -\ 22.png);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 4230px;
+  z-index: -1;
+} */
+.back-logo {
+  background-image: url(../images/logo_back.png);
+  width: 100vw;
+  height: 36.5vw;
+  z-index: -3;
+  position: absolute;
+  justify-content: center;
+  top: 0;
+}
+.back-main {
+  z-index: -2;
+  width: 90.6vw;
+  height: 272.1vw;
+  background-color: #f5f5f5;
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 31.5vw;
+  left: 5vw;
+  border-radius: 1.5vw;
+}
+.title-main {
+  position: relative;
+  top: 28vw;
+  left: 6vw;
+}
+.text-main {
+  width: 70.7vw;
+  position: relative;
+  top: 29.5vw;
+  left: 7vw;
+}
+.text-main-2 {
+  width: 70.7vw;
+  position: relative;
+  top: 32vw;
+  left: 7vw;
+}
+.mini-links {
+  justify-content: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  transition: all ease 0.2s;
+  /* color: #363636; */
+  padding: 0.1vw 20vw;
+  position: relative;
+  top: 32vw;
+  left: -15vw;
+  /* background-color: rgba(255, 255, 255 0.4); */
+}
+.mini-links a {
+  text-align: center;
+  border: 1.5px solid #363636;
+  border-radius: 3.1vw;
+  width: 13.1vw;
+  height: 3.35vw;
+  color: #363636;
+  text-decoration: none;
+  transition: all ease 0.2s;
+  margin-left: 1.5vw;
+  padding-top: 0.5vw;
+}
+.mini-links a:hover {
+  background-color: #9c9c9c;
+  scale: 1.1;
+  /* text-decoration: underline; */
+  color: #f5f5f5;
+  border: 1.5px solid #9c9c9c;
+  transition: all ease 0.4s;
+}
+/* Мой код */
+/* .afishka-main {
+  display: flex;
+  /* align-items: center; */
+/* justify-content: space-between; */
+
+.our-afisha {
+  margin-top: 35vw;
+  margin-left: 6vw;
+  position: absolute;
+  z-index: -1;
+}
+
+/* .row-link {
+  display: flex;
+  width: 19.5vw;
+  height: 3.9vw;
+  position: absolute;
+  /* align-items: center;
+  justify-content: space-between;
+  width: 19.5vw;
+  height: 3.9vw;
+  border: 1.5px solid #363636;
+  border-radius: 3.1vw; */
+
+/* .afisha-link {
+  margin-top: 35vw;
+  margin-left: 15vw;
+} */
+/* .row {
+  background-image: url(../images/row.svg);
+  position: relative;
+  z-index: 3;
+  width: 2.1vw;
+  height: 2.3vw;
+  margin-left: 13vw;
+  margin-top: -0.5vw;
+} */
+/* .row-link a {
+  border: 1.5px solid #363636;
+  border-radius: 3.1vw;
+  position: absolute;
+  text-align: center;
+  width: 13.1vw;
+  height: 3.35vw;
+  color: #363636;
+  text-decoration: none;
+  transition: all ease 0.2s;
+  margin-left: 1.5vw;
+  padding-top: 0.5vw;
+} */
+/* Из дипсик */
+/* .afisha-section {
+  position: relative; Делаем секцию контейнером для позиционирования
+  min-height: 200px; Минимальная высота секции
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+} */
+
+/* .afishka-main {
+  height: 100%;
+}
+
+.our-afisha {
+  margin: 0;
+  padding: 0;
+} */
+
+.row-link {
+  width: 19.5vw;
+  position: absolute;
+  margin-top: 39vw;
+  margin-left: 75vw;
+  display: flex;
+  align-items: center;
+  gap: 3.2vw;
+  padding: 0.78vw 1.56vw;
+  border: 1px solid #000000;
+  border-radius: 3.1vw;
+}
+
+.row-link a {
+  text-decoration: none;
+  color: #000000;
+}
+/* .row {
+  background-image: url(../images/row.svg);
+  width: 2.1vw;
+  height: 2.3vw;
+} */
+#row-1 {
+  /* background-color: #000000; */
+  /* background-image: url(../images/row.svg); */
+  width: 2.1vw;
+  height: 2.3vw;
+}
+.row-link:hover {
+  /* background-color: #9c9c9c; */
+  scale: 1.1;
+  /* text-decoration: underline; */
+  color: #f5f5f5;
+  border: 1.5px solid #9c9c9c;
+  transition: all ease 0.4s;
+}
+/* .custom-prev-btn {
+  background-image: url(../images/row-left.svg);
+  width: 7.8vw;
+  height: 7.8vw;
+  margin-left: 5vw;
+}
+.custom-next-btn {
+  background-image: url(../images/row-right.svg);
+  margin-left: 80vw;
+  width: 7.8vw;
+  height: 7.8vw;
+} */
+.slider-container {
+  height: 43vw;
+  max-width: 89vw;
+  /* margin: 50px auto; */
+  /* position: relative; */
+  background-color: #575757;
+  border-radius: 1.5vw;
+  display: flex;
+  margin-left: 6vw;
+  margin-top: 48.2vw;
+  z-index: 2;
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.25);
+}
+
+.swiper {
+  width: 100%;
+  height: 41.25vw;
+  /* padding-left: 6vw;
+  padding-right: 6vw; */
+}
+.swiper-wrapper {
+  width: 58.6vw;
+}
+.swiper-slide {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40vw;
+}
+
+.swiper-slide img {
+  width: 28.5vw;
+  max-width: 90%;
+  height: 40.2vw;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  margin-top: 1.5vw;
+}
+
+/* Увеличение активного слайда */
+.swiper-slide.swiper-slide-active img {
+  transform: scale(1.1);
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); */
+}
+
+/* Уменьшение неактивных слайдов */
+.swiper-slide:not(.swiper-slide-active) img {
+  transform: scale(0.8);
+}
+
+/* Стили для кнопок */
+.custom-prev-btn,
+.custom-next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  width: 7.8vw;
+  height: 7.8vw;
+  transition: transform 0.3s ease;
+}
+
+.custom-prev-btn {
+  left: 1vw;
+}
+.custom-next-btn {
+  right: 3vw;
+}
+
+.custom-prev-btn img,
+.custom-next-btn img {
+  width: 7.8vw;
+  height: 7.8vw;
+  /* background-color: #000000; */
+  transition: transform 0.3s ease;
+}
+
+/* Эффект при наведении */
+.custom-prev-btn:hover img,
+.custom-next-btn:hover img {
+  transform: scale(1.2);
+}
+/* .run-stroke {
+  font-style: normal;
+  font-size: 5vw;
+  width: 90vw;
+  margin-left: 5vw;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  
+  padding: 10px 0;
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+} */
+.run-stroke {
+  margin-left: 5vw;
+  width: 90vw;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  /* background-color: #f0f0f0; */
+  /* фон контейнера */
+  padding: 10px 0;
+}
+.run-text {
+  display: inline-block;
+  font-style: normal;
+  font-size: 5vw;
+  animation: marquee 15s linear infinite;
+}
+.row-link-action {
+  width: 19.5vw;
+  position: absolute;
+  margin-top: -4vw;
+  margin-left: 75vw;
+  display: flex;
+  align-items: center;
+  gap: 6.2vw;
+  padding: 0.78vw 1.56vw;
+  border: 1px solid #000000;
+  border-radius: 3.1vw;
+}
+
+.row-link-action a {
+  text-decoration: none;
+  color: #000000;
+}
+.row-link-action:hover {
+  /* background-color: #9c9c9c; */
+  scale: 1.1;
+  /* text-decoration: underline; */
+  color: #f5f5f5;
+  border: 1.5px solid #9c9c9c;
+  transition: all ease 0.4s;
+}
+.on-actions {
+  margin-left: 6vw;
+}
+.first-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.mk-photo {
+  width: 26.7vw;
+  height: 22vw;
+}
+.mk-text {
+  font-size: 1.5vw;
+  padding-top: 0.5vw;
+  text-align: center;
+  border: 1.5px solid #363636;
+  border-radius: 3.1vw;
+  width: 14.2vw;
+  height: 3.35vw;
+}
+.mk {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.oneaction-text {
+  width: 27.5vw;
+  height: 18.5vw;
+  font-size: 1.8vw;
+  padding: 2vw;
+  text-align: flex-start;
+  border: 1.5px solid #363636;
+  border-radius: 1.5vw;
+}
+/* nhfkz kz */
+/* kjeghbks.zjders. */

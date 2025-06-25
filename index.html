@@ -6,23 +6,130 @@
     <title>Главная</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
     <link rel="stylesheet" href="stylesheets/index.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="javascripts/scripts.js"></script>
   </head>
   <body>
     <nav>
+      <div id="burger"></div>
       <div class="main-menu">
-        <a href="index.html">Главная</a>
+        <a href="index.html"
+          ><img src="images/логотипчик_без_шума 2.svg" alt="Главная"
+        /></a>
         <div class="links">
+          <a href="afisha.html">Афиша</a>
           <a href="active.html">Активности</a>
           <a href="tickets.html">Билеты</a>
           <a href="shop.html">Магазин</a>
-          <a href="contacts.html">Контакты</a>
-          <a href="retro.html">Ретроспектива</a>
+          <a href="basket.html"
+            ><img src="images/basket_grey.png" alt="корзинка"
+          /></a>
         </div>
       </div>
     </nav>
+
     <section>
-      <h1>О нас</h1>
+      <div class="back-logo"></div>
     </section>
+    <section>
+      <div class="back-main"></div>
+      <h3 class="title-main">Neo-Car – это...</h3>
+      <p class="text-main">
+        ежегодный фестиваль машин, проводимый летом под открытым небом.
+        Традиционно, мероприятие проходит в первую субботу июля и после
+        продолжает функционировать как выставка машин до конца сезона.
+      </p>
+      <p class="text-main-2">
+        День фестиваля наполнен разнообразными активностями: квесты,
+        матер-классы, аттракционы, картинг, дрифт, выставка и, в качестве
+        кульминации, концерт техно-музыки.
+      </p>
+    </section>
+    <section>
+      <div class="mini-links">
+        <a href="afisha.html">Афиша</a>
+        <a href="active.html">Активности</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="shop.html">Магазин</a>
+      </div>
+    </section>
+    <section>
+      <div class="afishka-main">
+        <h4 class="our-afisha">Наша афиша</h4>
+        <div class="row-link">
+          <a href="afisha.html">Узнать больше</a>
+          <div id="row-1" class="row"><img src="images/row.svg" alt="" /></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="slider-container">
+        <!-- Swiper -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/oblojka_mini.svg" alt="Slide 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/plakat_2.svg" alt="Slide 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/plakat_3.svg" alt="Slide 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/plakat_4.svg" alt="Slide 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/plakat_5.svg" alt="Slide 5" />
+            </div>
+          </div>
+
+          <!-- Custom Navigation Buttons -->
+          <div class="custom-prev-btn">
+            <img src="images/row-left.svg" alt="Previous" />
+          </div>
+          <div class="custom-next-btn">
+            <img src="images/row-right.svg" alt="Next" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="run-stroke">
+        <div class="run-text">
+          ФЕСТИВАЛЬ СОВСЕМ СКОРО ФЕСТИВАЛЬ СОВСЕМ СКОРО ФЕСТИВАЛЬ СОВСЕМ СКОРО
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="actions-main">
+        <h4 class="on-actions">На фестивале</h4>
+        <div class="row-link-action">
+          <a href="active.html">Подробнее</a>
+          <div id="row-1" class="row"><img src="images/row.svg" alt="" /></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="onaction-more">
+        <div class="first-row">
+          <div class="mk">
+            <img class="mk-photo" src="images/mk.svg" alt="MK" />
+            <div class="mk-text">мастер-классы</div>
+          </div>
+          <div class="oneaction-text">
+            Готовьтесь к захватывающим приключениям! В этом году мы подготовили
+            множество уникальных активностей, которые не оставят равнодушными
+            никого!
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

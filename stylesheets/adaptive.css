@@ -1,0 +1,91 @@
+@media screen and (max-width: 600px) {
+  nav {
+    width: 100%;
+    border: none;
+    /* background-color: transparent; */
+    background-color: #eee;
+    background-color: transparent;
+    backdrop-filter: blur(0);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    left: 0;
+  }
+  .main-menu {
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    /* position: absolute; */
+    overflow: hidden;
+    /* position: relative; */
+    transform: translateX(-100%);
+    transition: transform ease 0.4s;
+    background-color: #eee;
+  }
+  .links {
+    gap: 10px;
+    flex-direction: column;
+  }
+  .main-menu a {
+    font-size: 3rem;
+    line-height: 3rem;
+    /* position: relative; */
+  }
+  #burger {
+    width: 40px;
+    height: 26px;
+    display: block;
+    margin: 16px;
+    cursor: pointer;
+    position: relative;
+    background-color: #eee;
+  }
+  #burger::before,
+  #burger::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #111;
+    /* border-radius: 100%; */
+    transition: transform ease 0.6s;
+  }
+  #burger::before {
+    top: 0;
+    box-shadow: 0 25px 0 #111;
+  }
+  #burger::after {
+    top: 13px;
+  }
+  #burger.active::before {
+    transform: rotate(45deg);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    top: 12px;
+    transition: transform ease 0.6s, top ease 0.8s;
+  }
+  #burger.active::after {
+    transform: rotate(-45deg);
+    transition: transform ease 0.6s;
+  }
+  #burger.active + .main-menu {
+    transform: translateX(0);
+    transition: transform ease 0.4s;
+  }
+  .main-menu a::before {
+    content: "";
+    position: absolute;
+    right: 40px;
+    width: 3rem;
+    height: 3rem;
+    background-image: url("https://img.icons8.com/ios/50/long-arrow-right--v2.png");
+    background-size: contain;
+    opacity: 0;
+  }
+  .main-menu a:hover::before {
+    opacity: 1;
+    transform: translateX(15px);
+    transition: opacity ease 0.4s, transform ease 0.9s;
+  }
+}
