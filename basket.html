@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Корзина</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <script src="javascripts/scripts.js"></script>
+    <script src="javascripts/basket.js"></script>
   </head>
   <body>
     <nav>
@@ -16,17 +16,72 @@
         /></a>
         <div class="links">
           <a href="afisha.html">Афиша</a>
-          <a href="active.html">Активности</a>
+
           <a href="tickets.html">Билеты</a>
           <a href="shop.html">Магазин</a>
-          <a href="basket.html"
-            ><img src="images/basket_grey.png" alt="корзинка"
+          <a href="basket.html" id="cartLink"
+            ><img src="images/basket_grey.png" id="cartIcon" alt="корзинка"
           /></a>
         </div>
       </div>
     </nav>
     <section>
-      <h1>Контакты</h1>
+      <div class="basket-back"><img src="images/basket-back.svg" alt="" /></div>
+      <h1 class="korzinochka">Корзина</h1>
+      <div class="basket-body"></div>
     </section>
+    <section>
+      <div class="basket-text">Оплачивайте всё, что понравилось</div>
+
+      <p class="pay-all">
+        <strong class="itogo">Итого:</strong>
+        <span class="price-itogo" id="totalPrice">0</span> ₽
+      </p>
+
+      <button class="button-for-pay" onclick="showPaymentPopup()">
+        Оплатить
+      </button>
+
+      <!-- Попап об оплате -->
+      <div id="paymentPopup" class="modal hidden">
+        <div class="modal-content">
+          <p>Счет на оплату направлен на вашу почту.</p>
+          <button class="close" onclick="hidePaymentPopup()">Закрыть</button>
+        </div>
+      </div>
+      <ul id="cartItems"></ul>
+    </section>
+    <!-- Подвал -->
+    <footer class="footer-basket">
+      <div class="footer-img"><img src="images/footer-back.svg" alt="" /></div>
+      <div class="footer-left">
+        <div class="footer-first-row">
+          <div class="footer-logo">
+            <img src="images/footer-logo.svg" alt="" />
+          </div>
+          <div class="footer-year">2025</div>
+          <div class="phone-number">8967311053</div>
+          <div class="about-number">круглосуточный телефон call-центра</div>
+        </div>
+        <div class="footer-second-row">
+          <div class="links-footer-1">
+            <a href="afisha.html">Афиша</a>
+            <a href="basket.html">Корзина</a>
+          </div>
+          <div class="links-footer-2">
+            <a href="tickets.html">Билеты</a>
+            <a href="shop.html">Магазин</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-third-row">
+        <div class="hse"><img src="images/footer-hse-logo.svg" alt="" /></div>
+        <div class="author">
+          автор Попов Андрей <br />
+          Б24УвКИ_02
+        </div>
+        <div class="age0"><img src="images/0+footer.svg" alt="" /></div>
+      </div>
+    </footer>
   </body>
 </html>

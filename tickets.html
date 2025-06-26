@@ -16,17 +16,78 @@
         /></a>
         <div class="links">
           <a href="afisha.html">Афиша</a>
-          <a href="active.html">Активности</a>
+
           <a href="tickets.html">Билеты</a>
           <a href="shop.html">Магазин</a>
-          <a href="basket.html"
-            ><img src="images/basket_grey.png" alt="корзинка"
-          /></a>
+          <a href="basket.html" id="cartLink"
+            ><img
+              src="images/basket_grey.png"
+              id="cartIcon"
+              alt="корзинка"
+            /><span id="cartCount">0</span></a
+          >
         </div>
       </div>
     </nav>
     <section>
-      <h1>Билеты</h1>
+      <div class="ticket-back"><img src="images/ticket-back.svg" alt="" /></div>
+      <h1 class="bilet">Билеты</h1>
+      <div class="back-ticket-body"></div>
     </section>
+    <section>
+      <div class="ticket-about">Пропуск в день машин</div>
+      <div class="vhod">Входной билет</div>
+      <div class="bileticki">
+        <div class="grown">
+          <div class="a"><img src="images/ticket-grown.svg" alt="" /></div>
+          <div class="pay-button-grown" onclick="addToCart('concert-a')">
+            В корзину
+          </div>
+        </div>
+        <div class="child">
+          <div class="a"><img src="images/ticket-child.svg" alt="" /></div>
+          <div class="pay-button-child" onclick="addToCart('concert-b')">
+            В корзину
+          </div>
+        </div>
+      </div>
+      <div class="pometka">
+        *Тариф “Детский” действителен для посетителей от 7 до 14 лет
+        включительно. Посетителям до 7 лет отдельный билет не требуется
+      </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer-ticket">
+      <div class="footer-img"><img src="images/footer-back.svg" alt="" /></div>
+      <div class="footer-left">
+        <div class="footer-first-row">
+          <div class="footer-logo">
+            <img src="images/footer-logo.svg" alt="" />
+          </div>
+          <div class="footer-year">2025</div>
+          <div class="phone-number">8967311053</div>
+          <div class="about-number">круглосуточный телефон call-центра</div>
+        </div>
+        <div class="footer-second-row">
+          <div class="links-footer-1">
+            <a href="afisha.html">Афиша</a>
+            <a href="basket.html">Корзина</a>
+          </div>
+          <div class="links-footer-2">
+            <a href="tickets.html">Билеты</a>
+            <a href="shop.html">Магазин</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-third-row">
+        <div class="hse"><img src="images/footer-hse-logo.svg" alt="" /></div>
+        <div class="author">
+          автор Попов Андрей <br />
+          Б24УвКИ_02
+        </div>
+        <div class="age0"><img src="images/0+footer.svg" alt="" /></div>
+      </div>
+    </footer>
   </body>
 </html>

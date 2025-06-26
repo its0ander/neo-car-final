@@ -12,6 +12,16 @@
 .back-shop-head > img {
   width: 100%;
 }
+.pay-button {
+  cursor: pointer;
+  padding-top: 0.35vw;
+}
+.pay-button:hover {
+  background-color: #faa685;
+  scale: 0.9;
+  transition: all ease 0.4s;
+}
+
 .back-shop-head {
   height: 36vw;
   position: relative;

@@ -16,12 +16,16 @@
         /></a>
         <div class="links">
           <a href="afisha.html">Афиша</a>
-          <a href="active.html">Активности</a>
+
           <a href="tickets.html">Билеты</a>
           <a href="shop.html">Магазин</a>
-          <a href="basket.html"
-            ><img src="images/basket_grey.png" alt="корзинка"
-          /></a>
+          <a href="basket.html" id="cartLink"
+            ><img
+              src="images/basket_grey.png"
+              id="cartIcon"
+              alt="корзинка"
+            /><span id="cartCount">0</span></a
+          >
         </div>
       </div>
     </nav>
@@ -52,7 +56,9 @@
                 <div class="tovar-text">Канцелярский набор</div>
                 <div class="tovar-price">590.00₽</div>
               </div>
-              <div class="pay-button"><p class="korzina">В корзину</p></div>
+              <div class="pay-button" onclick="addToCart('vip-ticket')">
+                <p class="korzina">В корзину</p>
+              </div>
             </div>
           </div>
           <div class="tovar-2">
@@ -133,7 +139,7 @@
         <div class="footer-second-row">
           <div class="links-footer-1">
             <a href="afisha.html">Афиша</a>
-            <a href="active.html">Активности</a>
+            <a href="basket.html">Корзина</a>
           </div>
           <div class="links-footer-2">
             <a href="tickets.html">Билеты</a>
