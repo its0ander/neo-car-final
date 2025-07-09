@@ -121,10 +121,10 @@
     font-size: 14vw;
   }
   .text-main {
-    font-size: 3.1vw;
+    font-size: 4.1vw;
   }
   .text-main-2 {
-    font-size: 3.1vw;
+    font-size: 4.1vw;
   }
   /* .mini-links {
     flex-direction: column;
@@ -190,29 +190,130 @@
 
   /* Мобильная версия (1 слайд) */
   .swiper-slide {
+    margin-top: 11vw;
     width: 100%;
-    left: 25%;
+    left: 10%;
     /* margin-left: 6vw; */
   }
   .swiper {
     padding: 0;
+    height: 84.5vw !important;
   }
   h4 {
     font-size: 9vw;
   }
   .row-link-afisha {
-    width: 29.5vw;
-    height: 5.5vw;
+    width: 29.5vw !important;
+    height: 5.5vw !important;
     position: absolute;
-    margin-top: 40vw;
-    margin-left: 79vw;
+    margin-top: 38vw !important;
+    margin-left: 65vw !important;
     display: flex;
     align-items: center;
     gap: 5vw;
-    padding: 0.78vw 0.06vw;
+    padding: 0.78vw 0.06vw !important;
     border: 0.1vw solid #000000;
     border-radius: 3.1vw;
+  }
+  .row-link-afisha-text {
     font-size: 2.7vw;
+  }
+  .row-ticket {
+    width: 3.1vw !important;
+    margin-left: -1vw !important;
+  }
+  .swiper-slide img {
+    height: 74.5vw !important;
+    width: 52vw !important;
+  }
+  .slider-container {
+    margin-left: 7vw !important;
+    height: 89vw !important;
+    width: 86.5vw;
+  }
+  .our-afisha {
+    margin-top: 35.5vw !important;
+    margin-left: 7vw !important;
+  }
+  .custom-prev-btn,
+  .custom-next-btn {
+    top: 53% !important;
+  }
+  .custom-prev-btn {
+    margin-left: 1vw;
+  }
+  .run-stroke {
+    height: 9.7vw !important;
+  }
+  .actions-all {
+    padding-top: 6vw !important;
+    padding-bottom: 6vw !important;
+    flex-direction: column;
+    height: auto !important;
+  }
+  .oneaction-text {
+    margin-left: -0.5vw;
+    width: 78vw !important;
+    /* width: auto !important; */
+    /* height: 40.6vw !important; */
+    height: auto !important;
+    font-size: 4.5vw !important;
+    padding: 4.5vw !important;
+    border-radius: 4.5vw !important;
+  }
+  .mk,
+  .first-row {
+    gap: 2vw !important;
+  }
+  .mk-text {
+    padding: 2vw !important;
+    font-size: 4.5vw !important;
+    border-radius: 5vw !important;
+    width: 41.3vw !important;
+    height: 9.7vw !important;
+    margin-left: 18vw !important;
+  }
+  .mk-text-1 {
+    padding: 2vw !important;
+    font-size: 4.5vw !important;
+    border-radius: 5vw !important;
+    width: 41.3vw !important;
+    height: 9.7vw !important;
+    margin-left: 18vw !important;
+  }
+  .photo-actions-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw !important;
+    margin-top: 2vw;
+  }
+  .photo-actions-2 {
+    margin-top: 2vw;
+    display: grid;
+    gap: 2vw;
+  }
+  .car-text {
+    padding-top: 2vw !important;
+    /* align-items: center; */
+    font-size: 4.5vw !important;
+    border-radius: 5vw !important;
+    width: 54vw !important;
+    height: 9.7vw !important;
+    margin-left: 13vw !important;
+  }
+  .drift-text {
+    padding-top: 2vw !important;
+    /* align-items: center; */
+    font-size: 4.5vw !important;
+    border-radius: 5vw !important;
+    width: 23vw !important;
+    height: 9.7vw !important;
+    margin-left: 28vw !important;
+  }
+  .drift-photo {
+    margin-top: 2vw;
+    display: grid;
+    gap: 2vw;
   }
 }
 

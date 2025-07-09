@@ -386,12 +386,15 @@
   position: relative;
   /* margin-left: 7vw; */
 }
-.mk-photo {
+/* .mk-photo {
   width: 26.7vw;
   height: 22vw;
+} */
+.mk > img {
+  width: 100%;
 }
-
-.mk-text {
+.mk-text,
+.mk-text-1 {
   font-size: 1.5vw;
   padding-top: 0.5vw;
   text-align: center;
@@ -541,6 +544,7 @@
   font-size: 1.25vw;
 }
 .row-link-afisha a {
+  padding-bottom: 0.5vw;
   text-decoration: none;
   color: #000000;
   padding-left: 1vw;
