@@ -52,10 +52,10 @@
   left: 7vw;
 }
 .mini-links {
-  justify-content: center;
+  /* justify-content: center; */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between; */
+  /* align-items: flex-start; */
   text-decoration: none;
   transition: all ease 0.2s;
   /* color: #363636; */
@@ -68,7 +68,7 @@
 .mini-links a {
   text-align: center;
   border: 0.1vw solid #363636;
-  border-radius: 3.1vw;
+  border-radius: 4.1vw;
   width: 13.1vw;
   height: 3.35vw;
   color: #363636;
@@ -76,6 +76,12 @@
   transition: all ease 0.2s;
   margin-left: 1.5vw;
   padding-top: 0.5vw;
+}
+.mini-links-first {
+  display: flex;
+}
+.mini-links-second {
+  display: flex;
 }
 .mini-links a:hover {
   background-color: #9c9c9c;
@@ -584,4 +590,14 @@
 }
 .razrabotka {
   display: none;
+}
+.mobile-slider {
+  display: none;
+}
+.desktop-slider {
+  display: block;
+}
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
 }

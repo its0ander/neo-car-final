@@ -38,9 +38,9 @@ function showBurgerMenu() {
 
 function clicker() {
   const swiper = new Swiper(".swiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    centeredSlides: true,
+    slidesPerView: 1,
+    centeredSlides: true, // Добавляем центровку
+    spaceBetween: 20,
     loop: true,
 
     navigation: {
@@ -48,10 +48,12 @@ function clicker() {
       prevEl: ".custom-prev-btn",
     },
 
-    // Анимация при изменении слайда
-    on: {
-      slideChange: function () {
-        // Можно добавить дополнительные эффекты здесь
+    breakpoints: {
+      600: {
+        slidesPerView: 3,
+        centeredSlides: true, // Центрируем и в десктопном режиме
+        initialSlide: 1, // Начинаем со второго слайда (чтобы первый был по центру)
+        spaceBetween: 30,
       },
     },
   });
@@ -102,3 +104,59 @@ function updateCartIndicator() {
 window.onload = function () {
   updateCartIndicator();
 };
+
+// Инициализация Swiper для десктопной версии
+// document.addEventListener("DOMContentLoaded", function () {
+//   if (window.innerWidth > 600) {
+//     const desktopSwiper = new Swiper(".desktop-slider", {
+//       slidesPerView: 3,
+//       spaceBetween: 20,
+//       navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+//       },
+//       loop: true,
+//       autoplay: {
+//         delay: 3000,
+//         disableOnInteraction: false,
+//       },
+//     });
+//   }
+
+// Логика для мобильного слайдера
+// if (window.innerWidth <= 600) {
+//   const slides = document.querySelectorAll(".mobile-slide");
+//   const prevBtn = document.querySelector(".mobile-prev");
+//   const nextBtn = document.querySelector(".mobile-next");
+//   let currentIndex = 0;
+
+//   function showSlide(index) {
+//     slides.forEach((slide, i) => {
+//       slide.classList.toggle("active", i === index);
+//     });
+//   }
+
+//   function nextSlide() {
+//     currentIndex = (currentIndex + 1) % slides.length;
+//     showSlide(currentIndex);
+//   }
+
+//   function prevSlide() {
+//     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+//     showSlide(currentIndex);
+//   }
+
+//   nextBtn.addEventListener("click", nextSlide);
+//   prevBtn.addEventListener("click", prevSlide);
+
+// Автопрокрутка для мобильной версии
+//     setInterval(nextSlide, 3000);
+//   }
+// });
+
+// // Обработчик изменения размера окна
+// window.addEventListener("resize", function () {
+//   if (window.innerWidth <= 600) {
+//     document.querySelector(".desktop-slider")?.swiper?.destroy();
+//   }
+// });
