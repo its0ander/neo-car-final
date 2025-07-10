@@ -521,7 +521,8 @@
   border: 0.1vw solid #9c9c9c;
   transition: all ease 0.4s;
 }
-#row-ticket {
+#row-ticket,
+.row-ticket-1 {
   width: 2vw;
   margin-left: -4vw;
   padding-top: 0.1vw;
@@ -604,4 +605,7 @@
 .swiper-wrapper {
   display: flex;
   align-items: center;
+}
+.ticket-mobile {
+  display: none;
 }

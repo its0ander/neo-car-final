@@ -1,4 +1,8 @@
 @media screen and (max-width: 600px) {
+  body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
   nav {
     /* width: 100%;
     border: none;
@@ -10,6 +14,9 @@
     left: 0;
     z-index: 1; */
     height: 9vw;
+    margin-left: 0.5vw;
+    border-bottom-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
   }
   /* .burger-back {
     z-index: 100;
@@ -314,6 +321,90 @@
     margin-top: 2vw;
     display: grid;
     gap: 2vw;
+  }
+  .row-link-merch {
+    width: 19vw !important;
+    height: 6.3vw !important;
+    position: absolute;
+    margin-top: -8vw !important;
+    margin-left: 75vw !important;
+    display: flex;
+    align-items: center;
+    gap: 3vw !important;
+    padding: 1.78vw 1.06vw !important;
+    border: 0.1vw solid #000000;
+    border-radius: 3.1vw;
+    font-size: 2.7vw !important;
+    padding-bottom: 1vw;
+  }
+  .more {
+    font-size: 2.7vw;
+  }
+  .back-main {
+    height: 1080vw !important;
+    border-radius: 3vw !important;
+  }
+  .row-ticket-1 {
+    margin-top: 0.5vw;
+    margin-left: -1vw !important;
+    width: 3vw !important;
+  }
+  .goods {
+    display: grid !important;
+    scale: 3;
+    justify-content: center;
+    margin-top: 95vw;
+  }
+  .goods-main {
+    height: 291vw !important;
+    margin-top: 5.5vw !important;
+  }
+  .ticket-mobile {
+    display: flex !important;
+    margin-left: -0.5vw !important;
+    margin-top: -2.8vw !important;
+  }
+  .ticket-photo-desktop {
+    display: none;
+  }
+  .row-link-ticket {
+    width: 19vw !important;
+    height: 6.3vw !important;
+    position: absolute;
+    margin-top: -7.5vw !important;
+    margin-left: 75vw !important;
+    display: flex;
+    align-items: center;
+    gap: 5vw !important;
+    /* padding: 0.78vw 0.06vw; */
+    border: 0.1vw solid #000000;
+    border-radius: 3.1vw;
+    font-size: 1.25vw;
+  }
+  .kupite {
+    font-size: 2.7vw;
+  }
+  .merch-main {
+    position: relative;
+    top: 5.6vw;
+  }
+  .footer-main {
+    position: relative !important;
+    margin-top: 93vw !important;
+  }
+  .footer-second-row {
+    height: 15vw;
+    scale: 2;
+    margin-top: 2.5vw !important;
+    margin-left: 18vw !important;
+  }
+  .links-footer-1 a,
+  .links-footer-2 a {
+    background-color: rgba(87, 87, 87, 0.5);
+
+    /* border: 0.1vw solid #eee; */
+
+    /* color: #eee; */
   }
 }
 
