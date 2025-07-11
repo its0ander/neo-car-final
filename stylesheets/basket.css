@@ -116,3 +116,227 @@
 /* #cartLink > img {
   width: 100%;
 } */
+/* Базовые стили */
+.basket-items {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.basket-item {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.basket-item:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+/* Стили для разных категорий */
+.basket-item[data-category="electronics"] {
+  border-left: 4px solid #4285f4;
+}
+
+.basket-item[data-category="clothing"] {
+  border-left: 4px solid #34a853;
+}
+
+/* Элементы внутри */
+.basket-item-name {
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.basket-item-price {
+  color: #ea4335;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.basket-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Кнопки */
+.quantity-decrease,
+.quantity-increase,
+.remove-item {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-item {
+  background: #ea4335;
+  color: white;
+}
+/* Специальные стили */
+.new-item {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(66, 165, 245, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(66, 165, 245, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(66, 165, 245, 0);
+  }
+}
+
+.highlight-item {
+  background: #fff8e1;
+}
+
+.discounted-item {
+  position: relative;
+}
+
+.discounted-item::after {
+  content: "SALE";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #fbbc05;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* Код из гпт */
+/* Базовые стили списка */
+.basket-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Стили элемента корзины */
+.basket-item {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.basket-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Главный блок с контентом */
+.basket-item__main {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.basket-item__image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.basket-item__info {
+  flex-grow: 1;
+}
+
+.basket-item__title {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.basket-item__description {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Блок управления */
+.basket-item__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-btn {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.price-block {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Кастомные стили по категориям */
+.basket-item[data-category="electronics"] {
+  border-left: 4px solid #3498db;
+}
+
+.basket-item[data-category="parts"] {
+  border-left: 4px solid #e74c3c;
+}
+
+/* Специальные состояния */
+.basket-item.highlight {
+  animation: highlight-pulse 1.5s;
+}
+
+@keyframes highlight-pulse {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #f8f4e5;
+  }
+  100% {
+    background-color: #fff;
+  }
+}

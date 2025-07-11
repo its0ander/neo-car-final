@@ -1,9 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  loadCart();
-  updateQuantity(productId, newQty);
-  //   getPriceByName(name);
-  showPaymentPopup();
-  hidePaymentPopup();
+  // loadCart();
+  // updateQuantity(productId, newQty);
+  // showPaymentPopup();
+  // hidePaymentPopup();
+  // createBasketItemElement();
+  createBasketItem();
+  addToBasket();
+  updateBasketItem();
 });
 
 function loadCart() {
@@ -73,3 +76,114 @@ function hidePaymentPopup() {
 window.onload = function () {
   loadCart();
 };
+// Новая функция создания элемента корзины
+function createBasketItemElement(item) {
+  const li = document.createElement("li");
+  li.className = "basket-item"; // Базовый класс
+
+  // Добавляем кастомные data-атрибуты
+  li.dataset.productId = item.id;
+  li.dataset.category = item.category;
+
+  li.innerHTML = `
+    <div class="basket-item-content">
+      <span class="basket-item-name">${item.name}</span>
+      <span class="basket-item-price">${item.price} руб.</span>
+      <div class="basket-item-controls">
+        <button class="quantity-decrease">-</button>
+        <span class="item-quantity">${item.quantity}</span>
+        <button class="quantity-increase">+</button>
+        <button class="remove-item">Удалить</button>
+      </div>
+    </div>
+  `;
+
+  return li;
+}
+
+// Новая функция создания элемента корзины
+function createBasketItem(item) {
+  const li = document.createElement("li");
+  li.className = "basket-item";
+  li.dataset.id = item.id;
+  li.dataset.category = item.category || "other";
+
+  li.innerHTML = `
+    <div class="basket-item__main">
+      <img src="${item.image || "img/default-product.jpg"}" 
+           alt="${item.name}" 
+           class="basket-item__image">
+      <div class="basket-item__info">
+        <h3 class="basket-item__title">${item.name}</h3>
+        <p class="basket-item__description">${item.description || ""}</p>
+      </div>
+    </div>
+    <div class="basket-item__controls">
+      <div class="quantity-control">
+        <button class="quantity-btn minus">−</button>
+        <span class="quantity">${item.quantity}</span>
+        <button class="quantity-btn plus">+</button>
+      </div>
+      <div class="price-block">
+        <span class="price">${item.price} ₽</span>
+        <button class="remove-btn">
+          <img src="img/trash-icon.svg" alt="Удалить">
+        </button>
+      </div>
+    </div>
+  `;
+
+  return li;
+}
+
+// Обновляем функцию добавления в корзину
+function addToBasket(product) {
+  // ... существующий код поиска товара в корзине
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+    // Обновляем конкретный элемент
+    updateBasketItem(existingItem);
+  } else {
+    const newItem = { ...product, quantity: 1 };
+    basketItems.push(newItem);
+    const itemElement = createBasketItem(newItem);
+    document.getElementById("basket-items").appendChild(itemElement);
+  }
+
+  updateTotal();
+}
+// Делегирование событий для кнопок
+document.getElementById("basket-items").addEventListener("click", (e) => {
+  const itemElement = e.target.closest(".basket-item");
+  if (!itemElement) return;
+
+  const itemId = itemElement.dataset.id;
+  const item = basketItems.find((item) => item.id == itemId);
+
+  if (e.target.classList.contains("plus")) {
+    item.quantity += 1;
+    updateBasketItem(item);
+  } else if (e.target.classList.contains("minus")) {
+    if (item.quantity > 1) {
+      item.quantity -= 1;
+      updateBasketItem(item);
+    }
+  } else if (e.target.closest(".remove-btn")) {
+    removeFromBasket(item.id);
+  }
+
+  updateTotal();
+});
+
+// Функция обновления элемента
+function updateBasketItem(item) {
+  const itemElement = document.querySelector(
+    `.basket-item[data-id="${item.id}"]`
+  );
+  if (itemElement) {
+    itemElement.querySelector(".quantity").textContent = item.quantity;
+    itemElement.classList.add("highlight");
+    setTimeout(() => itemElement.classList.remove("highlight"), 1500);
+  }
+}

@@ -50,7 +50,7 @@
     transition: transform ease 0.4s;
     background-color: #eee;
     z-index: 1;
-    border-radius: 1.5vw;
+    border-radius: 3vw;
   }
   .links {
     gap: 10px;
@@ -400,11 +400,23 @@
   }
   .links-footer-1 a,
   .links-footer-2 a {
-    background-color: rgba(87, 87, 87, 0.5);
+    background-color: rgba(217, 217, 217, 0.5);
 
-    /* border: 0.1vw solid #eee; */
+    border: 0.1vw solid #575757;
 
     /* color: #eee; */
+  }
+  .footer-left {
+    display: flex;
+    /* gap: 30vw; */
+    align-items: center;
+    margin-top: 3.5vw !important;
+  }
+  .footer-year,
+  .phone-number,
+  .about-number,
+  .footer-third-row {
+    display: none !important;
   }
 }
 
