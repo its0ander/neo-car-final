@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="stylesheets/style.css" />
     <script src="javascripts/basket.js"></script>
     <script src="javascripts/scripts.js"></script>
+    <!-- Добавьте в <head> -->
+    <link rel="stylesheet" href="css/basket.css" />
   </head>
   <body>
     <nav>
@@ -33,6 +35,7 @@
         </div>
       </div>
     </nav>
+
     <section>
       <div class="basket-back"><img src="images/basket-back.svg" alt="" /></div>
       <h1 class="korzinochka">Корзина</h1>
@@ -57,10 +60,10 @@
           <button class="close" onclick="hidePaymentPopup()">Закрыть</button>
         </div>
       </div>
-      <!-- <ul id="cartItems" class="basket-items"></ul> -->
-      <ul id="basket-items" class="basket-list">
-        <!-- Элементы будут генерироваться JS -->
-      </ul>
+      <ul id="cartItems" class="basket-items"></ul>
+      <!-- <ul id="basket-items" class="basket-list">
+       
+      </ul> -->
     </section>
     <!-- Подвал -->
     <footer class="footer-basket">

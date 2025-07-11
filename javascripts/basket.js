@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // loadCart();
-  // updateQuantity(productId, newQty);
-  // showPaymentPopup();
-  // hidePaymentPopup();
-  // createBasketItemElement();
+  loadCart();
+  updateQuantity(productId, newQty);
+  showPaymentPopup();
+  hidePaymentPopup();
+  createBasketItemElement();
   createBasketItem();
   addToBasket();
   updateBasketItem();
+  addToCart();
 });
 
 function loadCart() {
@@ -34,11 +35,11 @@ function loadCart() {
 
     const li = document.createElement("li");
     li.innerHTML = `
-      ${item.name} — ${item.price} ₽ x 
+      ${item.name} — ${item.price} ₽  
       <input type="number" value="${
         item.quantity
       }" min="1" onchange="updateQuantity('${item.id}', this.value)">
-      = <strong>${item.price * item.quantity} ₽</strong>
+      <strong>${item.price * item.quantity} ₽</strong>
     `;
     itemsList.appendChild(li);
   }
@@ -187,3 +188,94 @@ function updateBasketItem(item) {
     setTimeout(() => itemElement.classList.remove("highlight"), 1500);
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  let basketItems = JSON.parse(localStorage.getItem("basket")) || [];
+
+  // Инициализация корзины
+  function initBasket() {
+    renderBasket();
+    updateTotal();
+  }
+
+  // Рендер всех товаров
+  function renderBasket() {
+    const basketList = document.getElementById("basket-items");
+    basketList.innerHTML = "";
+
+    basketItems.forEach((item) => {
+      basketList.appendChild(createBasketItem(item));
+    });
+  }
+
+  // Создание элемента товара
+  function createBasketItem(item) {
+    const li = document.createElement("li");
+    li.className = "basket-item";
+    li.dataset.id = item.id;
+
+    li.innerHTML = `
+      <div class="basket-item__main">
+        <img src="${item.image || "img/default.jpg"}" 
+             alt="${item.name}" 
+             class="basket-item__image">
+        <div class="basket-item__info">
+          <h3 class="basket-item__title">${item.name}</h3>
+          ${
+            item.description
+              ? `<p class="basket-item__description">${item.description}</p>`
+              : ""
+          }
+        </div>
+      </div>
+      <div class="basket-item__controls">
+        <div class="quantity-control">
+          <button class="quantity-btn minus">−</button>
+          <span class="quantity">${item.quantity}</span>
+          <button class="quantity-btn plus">+</button>
+        </div>
+        <div class="price-block">
+          <span class="price">${item.price * item.quantity} ₽</span>
+          <button class="remove-btn">Удалить</button>
+        </div>
+      </div>
+    `;
+
+    return li;
+  }
+
+  // Обновление итоговой суммы
+  function updateTotal() {
+    const total = basketItems.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+    document.getElementById("basket-total").textContent = total;
+    localStorage.setItem("basket", JSON.stringify(basketItems));
+  }
+
+  // Обработчики событий
+  document
+    .getElementById("basket-items")
+    .addEventListener("click", function (e) {
+      const itemElement = e.target.closest(".basket-item");
+      if (!itemElement) return;
+
+      const itemId = parseInt(itemElement.dataset.id);
+      const item = basketItems.find((item) => item.id === itemId);
+
+      if (e.target.classList.contains("plus")) {
+        item.quantity += 1;
+      } else if (e.target.classList.contains("minus")) {
+        item.quantity = Math.max(1, item.quantity - 1);
+      } else if (e.target.classList.contains("remove-btn")) {
+        basketItems = basketItems.filter((i) => i.id !== itemId);
+      }
+
+      renderBasket();
+      updateTotal();
+    });
+
+  // Инициализация
+  initBasket();
+});
