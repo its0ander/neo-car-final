@@ -652,6 +652,11 @@
     scale: 4;
     /* margin-top: 78vw !important; */
   }
+
+  .pay-button-grown:hover,
+  .pay-button-child:hover {
+    transform: scale(3.95) !important;
+  }
   .back-ticket-body {
     position: absolute !important;
     height: 243vw !important;
