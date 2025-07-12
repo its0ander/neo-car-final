@@ -34,6 +34,8 @@
   margin-left: 5vw;
 }
 .button-for-pay {
+  z-index: 2;
+  cursor: pointer !important;
   font-size: 2.8vw;
   width: 28.2vw;
   height: 5vw;
@@ -56,28 +58,37 @@
 .price-itogo {
   font-size: 1.8vw;
 }
+#totalPrice {
+  color: #d9d9d9;
+  background-color: #575757;
+  border-radius: 3vw;
+  width: auto;
+  padding: 1vw;
+}
 .price-itogo {
   margin-left: 4vw;
 }
 .pay-all {
   width: 20.3vw;
-  height: 3.7vw;
+  height: 4.7vw;
   background-color: #d9d9d9;
   border-radius: 3.1vw;
   /* justify-content: center;
   align-items: center; */
   text-align: center;
-  padding-top: 1vw;
-  margin-top: -24vw;
-  margin-left: 45vw;
+  padding-top: 1.5vw;
+  margin-top: -19vw;
+  margin-left: 62vw;
   position: absolute;
 }
 #cartItems {
+  display: grid;
+  gap: 2vw;
   /* width: 73vw;
   height: 5.3vw;
   border-radius: 3.1vw;
   background-color: #d9d9d9; */
-  margin-top: -48vw;
+  margin-top: -54vw;
   font-size: 2.5vw;
   margin-left: 5vw;
 }
@@ -101,7 +112,7 @@
   color: #232323;
   font-size: 1.5vw;
   color: #232323;
-  border-radius: 0.7vw;
+  border-radius: 1.7vw;
   background-color: #d9d9d9;
   border: none;
   transition: all ease 0.2s;
@@ -448,12 +459,16 @@
 }
 
 #cartItems.basket-items li input {
-  background-color: #6ad31f;
+  background-color: #575757;
   width: 4vw;
-  border-radius: 3vw;
+  border-radius: 5vw;
+  color: #d9d9d9;
 }
 #cartItems.basket-items li strong {
-  background-color: #6ad31f;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 2.5vw;
+  margin-left: 16vw;
+  width: 11vw;
 }
 #cartItems.basket-items li input[type="number"] {
   /* justify-content: center; */
@@ -462,4 +477,10 @@
   /* margin-left: 1vw; */
   border: none;
   text-align: center;
+}
+/* .modal-content {
+  z-index: 11;
+} */
+#paymentPopup {
+  z-index: 11;
 }

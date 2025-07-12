@@ -69,7 +69,7 @@
     margin-left: 2vw;
     cursor: pointer;
     position: relative;
-    background-color: #eee;
+    /* background-color: #eee; */
   }
   #burger::before,
   #burger::after {
@@ -417,6 +417,173 @@
   .about-number,
   .footer-third-row {
     display: none !important;
+  }
+  #cartCount {
+    position: relative !important;
+    top: -26px !important;
+    right: 9px !important;
+    padding: 3px;
+    border-radius: 50px !important;
+  }
+  /* .basket-text {
+    scale: 1.3;
+    margin-left: 10vw !important;
+    margin-top: -83vw !important;
+  } */
+  #cartItems {
+    margin-top: -90vw !important;
+  }
+  #cartItems.basket-items > li {
+    width: 60.3vw !important;
+    margin-left: 10vw;
+  }
+  #cartItems.basket-items > li strong {
+    margin-left: 46vw !important;
+    width: 11vw !important;
+  }
+  #cartItems.basket-items li input[type="number"] {
+    margin-top: -3vw;
+    margin-left: 30vw;
+  }
+  .pay-all {
+    margin-top: -25vw !important;
+    margin-left: 54vw !important;
+  }
+  .basket-body {
+    height: 91vw !important;
+  }
+  .button-for-pay {
+    scale: 1.5;
+    top: -15vw !important;
+    left: 32vw !important;
+  }
+  #paymentPopup {
+    scale: 2;
+  }
+  .modal-content {
+    display: grid;
+    gap: 2vw;
+  }
+  .close {
+    width: 10vw;
+    scale: 1.7;
+    margin-left: 12vw;
+    margin-top: 2vw !important;
+  }
+  .basket-text {
+    scale: 1.2;
+    margin-top: -93vw !important;
+    margin-left: 10vw !important;
+  }
+  .schet {
+    scale: 1.2;
+  }
+  .footer-afishi {
+    margin-top: 6vw !important;
+  }
+  .left-afishi,
+  .right-afishi,
+  .left-deep-web,
+  .right-deep-web {
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .all-afishi-about {
+    display: grid !important;
+    gap: 3vw !important;
+    margin-top: -130vw !important;
+    scale: 2;
+  }
+  .afisha-about {
+    scale: 1.2;
+    margin-top: -46vw !important;
+    margin-left: 10vw !important;
+  }
+  .back-afisha-body {
+    height: 174.3vw !important;
+  }
+  .footer-web {
+    margin-top: -1vw !important;
+  }
+  #modal,
+  #modal_2 {
+    box-shadow: 1px 1px 1060px 41px !important;
+  }
+  #modal {
+    scale: 1.5;
+    left: 25% !important;
+  }
+  #modal_2 {
+    scale: 1.5;
+    top: 20% !important;
+    left: 25% !important;
+  }
+  .all-web {
+    margin-top: -118vw !important;
+    display: grid !important;
+    gap: 3vw !important;
+    scale: 2;
+  }
+  .back-deep-body {
+    height: 160vw !important;
+  }
+  .back-see-body {
+    height: 1130.3vw !important;
+  }
+  .deep-text {
+    scale: 1.2;
+    margin-top: -43vw !important;
+    margin-left: 10vw !important;
+  }
+  .first-row-posters,
+  .second-row-posters,
+  .third-row-posters {
+    padding: 2vw;
+    height: 370vw !important;
+    padding-top: 3vw;
+  }
+  .first-row-photos,
+  .second-row-photos,
+  .third-row-photos {
+    display: grid !important;
+    gap: 3vw !important;
+  }
+  .first-row-text {
+    scale: 1.5;
+    margin-left: 18vw !important;
+    margin-top: 3vw !important;
+  }
+  .see-text {
+    scale: 1.2;
+    margin-top: -6vw !important;
+    margin-left: 10vw !important;
+  }
+  .together-posters {
+    margin-top: -1125vw !important;
+  }
+  .about-shop {
+    scale: 1.2;
+    margin-top: -484vw !important;
+    margin-left: 10vw !important;
+  }
+  .goods-shop-second-row {
+    scale: 3;
+    display: grid !important;
+    margin-left: 36.5vw !important;
+    margin-top: 282vw !important;
+  }
+  .back-shop-body {
+    height: 483.3vw !important;
+  }
+  .goods-shop-first-row {
+    scale: 3;
+    display: grid !important;
+    gap: 2vw !important;
+    margin-top: -456vw !important;
+  }
+  .modal-content-1 {
+    position: relative;
+    left: -23%;
   }
 }
 

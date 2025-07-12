@@ -63,14 +63,18 @@ const products = {
   "concert-a": {
     id: "concert-a",
     name: "Билет на концерт «Взрослый»",
-    price: 2500,
+    // price: 2500,
   },
   "concert-b": {
     id: "concert-b",
     name: "Билет на концерт «Детский»",
-    price: 500,
+    // price: 500,
   },
-  "vip-ticket": { id: "vip-ticket", name: "Канцелярский набор", price: 590 },
+  "vip-ticket": {
+    id: "vip-ticket",
+    name: "Канцелярский набор",
+    // price: 590
+  },
 };
 
 function addToCart(productId) {
@@ -160,3 +164,47 @@ window.onload = function () {
 //     document.querySelector(".desktop-slider")?.swiper?.destroy();
 //   }
 // });
+// Получаем элементы
+document.addEventListener("DOMContentLoaded", function () {
+  // Получаем элементы
+  const payButtons = document.querySelectorAll(".pay-button");
+  const successModal = document.getElementById("successModal");
+  const closeBtn = document.querySelector(".modal-close-btn");
+  const toBasketBtn = document.querySelector(".modal-to-basket-btn");
+
+  // Обработчик для кнопок "Оплатить"
+  payButtons.forEach((button) => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      successModal.classList.add("active");
+      document.body.style.overflow = "hidden"; // Блокируем скролл
+    });
+  });
+
+  // Закрытие модального окна
+  closeBtn.addEventListener("click", function () {
+    successModal.classList.remove("active");
+    document.body.style.overflow = ""; // Восстанавливаем скролл
+  });
+
+  // Переход в корзину
+  toBasketBtn.addEventListener("click", function () {
+    window.location.href = "basket.html";
+  });
+
+  // Закрытие по клику вне окна
+  successModal.addEventListener("click", function (e) {
+    if (e.target === successModal) {
+      successModal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+
+  // Закрытие по ESC
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && successModal.classList.contains("active")) {
+      successModal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+});

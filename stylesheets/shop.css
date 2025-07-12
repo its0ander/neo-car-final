@@ -105,3 +105,75 @@
 .footer-shop {
   margin-top: -45vw;
 }
+/* Стили модального окна */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content-1 {
+  background: #e9e9e9;
+  padding: 30px;
+  border-radius: 3vw;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-message {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.modal-close-btn,
+.modal-to-basket-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3vw;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.modal-close-btn {
+  background: #575757;
+  color: #d9d9d9;
+}
+
+.modal-close-btn:hover {
+  background: #faa685;
+}
+
+.modal-to-basket-btn {
+  background: #575757;
+
+  color: #d9d9d9;
+}
+
+.modal-to-basket-btn:hover {
+  background: #faa685;
+}

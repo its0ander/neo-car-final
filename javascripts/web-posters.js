@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //   perehod();
   perehod_2();
   perehod_3();
+  showBurgerMenu();
 });
 
 function perehod() {
@@ -65,5 +66,10 @@ function perehod_3() {
 
   noBtn_2.addEventListener("click", () => {
     modal.style.display = "none";
+  });
+}
+function showBurgerMenu() {
+  document.querySelector("#burger").addEventListener("click", () => {
+    document.querySelector("#burger").classList.toggle("active");
   });
 }

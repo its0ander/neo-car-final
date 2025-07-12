@@ -35,7 +35,10 @@ function loadCart() {
 
     const li = document.createElement("li");
     li.innerHTML = `
-      ${item.name} — ${item.price} ₽  
+      ${item.name} 
+
+  
+
       <input type="number" value="${
         item.quantity
       }" min="1" onchange="updateQuantity('${item.id}', this.value)">
