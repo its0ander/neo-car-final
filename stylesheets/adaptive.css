@@ -354,6 +354,9 @@
     scale: 3;
     justify-content: center;
     margin-top: 95vw;
+    max-width: 30vw !important;
+    width: 40vw !important;
+    left: 29vw;
   }
   .goods-main {
     height: 291vw !important;
@@ -431,9 +434,13 @@
     margin-top: -83vw !important;
   } */
   #cartItems {
-    margin-top: -90vw !important;
+    scale: 1.35;
+    gap: 10vw !important;
+    margin-top: -150vw !important;
+    margin-left: 10vw !important;
   }
   #cartItems.basket-items > li {
+    /* scale: 1.4; */
     width: 60.3vw !important;
     margin-left: 10vw;
   }
@@ -443,19 +450,20 @@
   }
   #cartItems.basket-items li input[type="number"] {
     margin-top: -3vw;
-    margin-left: 30vw;
+    margin-left: 35vw;
   }
   .pay-all {
+    scale: 1.2;
     margin-top: -25vw !important;
-    margin-left: 54vw !important;
+    margin-left: 64vw !important;
   }
   .basket-body {
-    height: 91vw !important;
+    height: 171vw !important;
   }
   .button-for-pay {
     scale: 1.5;
-    top: -15vw !important;
-    left: 32vw !important;
+    top: -14vw !important;
+    left: 35vw !important;
   }
   #paymentPopup {
     scale: 2;
@@ -472,7 +480,7 @@
   }
   .basket-text {
     scale: 1.2;
-    margin-top: -93vw !important;
+    margin-top: -171vw !important;
     margin-left: 10vw !important;
   }
   .schet {
@@ -581,9 +589,13 @@
     gap: 2vw !important;
     margin-top: -456vw !important;
   }
+  .modal-overlay {
+    width: 100vw;
+    overflow-x: hidden;
+  }
   .modal-content-1 {
     position: relative;
-    left: -23%;
+    left: 0%;
   }
   .back-logo {
     display: none;

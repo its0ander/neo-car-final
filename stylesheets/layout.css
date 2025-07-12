@@ -1,4 +1,17 @@
+.container {
+  max-width: 100%; /* Было width: 1200px */
+  padding: 0 15px;
+}
+
+/* Для изображений */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
 * {
+  /* outline: 1px solid red; */
   box-sizing: border-box;
 }
 body {
@@ -7,7 +20,10 @@ body {
   /* overflow: hidden; */
   overflow-x: hidden;
 }
-
+.swiper-container {
+  max-width: 100vw; /* Ограничение по ширине экрана */
+  overflow: hidden;
+}
 h1 {
   font-size: 22vw;
   /* line-height: auto; */
