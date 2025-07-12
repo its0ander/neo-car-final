@@ -469,6 +469,7 @@
     position: absolute !important;
   }
   .button-for-pay {
+    text-decoration: none !important;
     scale: 1.5;
     top: -14vw !important;
     left: 35vw !important;
@@ -634,6 +635,63 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Для Safari */
     mask: linear-gradient(to top, black 20%, transparent 100%);
+  }
+  .a {
+    display: none;
+  }
+  .a-1,
+  .a-2 > img {
+    width: 100%;
+  }
+  .a-1,
+  .a-2 {
+    position: absolute;
+  }
+  .pay-button-grown,
+  .pay-button-child {
+    scale: 4;
+    /* margin-top: 78vw !important; */
+  }
+  .back-ticket-body {
+    position: absolute !important;
+    height: 243vw !important;
+  }
+  .footer-ticket {
+    position: absolute;
+    margin-top: -2vw !important;
+  }
+  .a-1 {
+    margin-top: 55vw;
+    margin-left: 8vw;
+  }
+  .a-2 {
+    margin-top: 20vw;
+    margin-left: 8vw;
+  }
+  .ticket-about {
+    scale: 1.2;
+    margin-top: 39vw !important;
+    margin-left: 10vw !important;
+  }
+  .vhod {
+    scale: 1.5;
+    margin-left: 15vw !important;
+    margin-top: 45vw !important;
+  }
+  .pay-button-grown {
+    margin-top: 134vw !important;
+    margin-left: 40vw !important;
+  }
+  .pay-button-child {
+    margin-top: 100vw !important;
+    margin-left: 40vw !important;
+  }
+  .pometka {
+    scale: 2;
+    position: absolute;
+    margin-top: 20vw !important;
+    width: 42vw !important;
+    margin-left: 28vw !important;
   }
 }
 

@@ -40,14 +40,22 @@
       <div class="vhod">Входной билет</div>
       <div class="bileticki">
         <div class="grown">
+          <div class="a-1"><img src="images/Frame 417.svg" alt="" /></div>
           <div class="a"><img src="images/ticket-grown.svg" alt="" /></div>
-          <div class="pay-button-grown" onclick="addToCart('concert-a')">
+          <div
+            class="pay-button-grown pay-button"
+            onclick="addToCart('concert-a')"
+          >
             В корзину
           </div>
         </div>
         <div class="child">
+          <div class="a-2"><img src="images/child-adaptive.svg" alt="" /></div>
           <div class="a"><img src="images/ticket-child.svg" alt="" /></div>
-          <div class="pay-button-child" onclick="addToCart('concert-b')">
+          <div
+            class="pay-button-child pay-button"
+            onclick="addToCart('concert-b')"
+          >
             В корзину
           </div>
         </div>
@@ -57,7 +65,15 @@
         включительно. Посетителям до 7 лет отдельный билет не требуется
       </div>
     </section>
-
+    <div class="modal-overlay" id="successModal">
+      <div class="modal-content-1">
+        <div class="modal-message">Товар добавлен в корзину!</div>
+        <div class="modal-buttons">
+          <button class="modal-close-btn">Закрыть</button>
+          <button class="modal-to-basket-btn">К корзине</button>
+        </div>
+      </div>
+    </div>
     <!-- Подвал -->
     <footer class="footer-ticket">
       <div class="footer-img"><img src="images/footer-back.svg" alt="" /></div>
