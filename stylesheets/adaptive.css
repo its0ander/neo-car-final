@@ -455,6 +455,10 @@
     margin-top: -3vw;
     margin-left: 35vw;
   }
+  .basketka {
+    position: absolute;
+    margin-top: 165vw;
+  }
   .pay-all {
     scale: 1.2;
     margin-top: -25vw !important;
@@ -462,6 +466,7 @@
   }
   .basket-body {
     height: 171vw !important;
+    position: absolute !important;
   }
   .button-for-pay {
     scale: 1.5;
@@ -485,6 +490,10 @@
     scale: 1.2;
     margin-top: -171vw !important;
     margin-left: 10vw !important;
+  }
+  .footer-basket {
+    position: absolute;
+    margin-top: 125vw !important;
   }
   .schet {
     scale: 1.2;
