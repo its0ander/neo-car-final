@@ -609,3 +609,9 @@
 .ticket-mobile {
   display: none;
 }
+.video-main {
+  display: none;
+}
+video {
+  width: 100%;
+}

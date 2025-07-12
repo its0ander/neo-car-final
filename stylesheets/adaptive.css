@@ -585,6 +585,32 @@
     position: relative;
     left: -23%;
   }
+  .back-logo {
+    display: none;
+  }
+  .main-index-all {
+    margin-top: 5vw;
+    position: absolute;
+  }
+  .video-main {
+    display: flex !important;
+    position: absolute;
+
+    z-index: -2;
+    margin-top: -4vw;
+    overflow: hidden;
+  }
+  .blur-bottom {
+    position: absolute;
+    z-index: -2;
+    bottom: 265px;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Высота размытой области */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Для Safari */
+    mask: linear-gradient(to top, black 20%, transparent 100%);
+  }
 }
 
 /* Для десктопного режима */
