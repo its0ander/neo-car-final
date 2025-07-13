@@ -20,6 +20,9 @@ body {
   /* overflow: hidden; */
   overflow-x: hidden;
 }
+.logo-adaptive {
+  display: none;
+}
 .swiper-container {
   max-width: 100vw; /* Ограничение по ширине экрана */
   overflow: hidden;

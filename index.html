@@ -15,9 +15,26 @@
     <script src="javascripts/scripts.js"></script>
   </head>
   <body>
+    <div class="preloader" id="preloader">
+      <div class="preloader-content">
+        <img
+          src="images/preloader-2.svg"
+          class="preloader-image"
+          alt="Loading"
+        />
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+          <div class="progress-text" id="progressText">0%</div>
+        </div>
+      </div>
+    </div>
     <nav>
       <!-- <div class="burger-back"> -->
-      <div id="burger"></div>
+      <div id="burger">
+        <a class="logo-adaptive" href="index.html"
+          ><img src="images/логотипчик_без_шума 2.svg" alt="Главная"
+        /></a>
+      </div>
       <!-- </div> -->
       <div class="main-menu">
         <a href="index.html"
