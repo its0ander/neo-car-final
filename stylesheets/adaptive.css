@@ -593,6 +593,7 @@
     margin-top: 3vw !important;
   }
   .see-text {
+    display: none !important;
     scale: 1.2;
     margin-top: -6vw !important;
     margin-left: 10vw !important;
