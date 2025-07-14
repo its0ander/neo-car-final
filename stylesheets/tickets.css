@@ -84,6 +84,10 @@
   margin-top: -7vw;
   margin-left: 6vw;
 }
+.a-1,
+.a-2 {
+  display: none;
+}
 .vhod {
   font-size: 5vw;
   position: absolute;
