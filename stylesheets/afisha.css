@@ -33,7 +33,7 @@
   font-size: 1.5vw;
   width: 46.8vw;
   color: #d9d9d9;
-  margin-left: 6vw;
+  /* margin-left: 6vw; */
 }
 .afishi-left-opisanie {
   display: flex;
@@ -84,7 +84,7 @@
   font-size: 1.5vw;
   width: 46.8vw;
   color: #d9d9d9;
-  margin-left: 6vw;
+  /* margin-left: 6vw; */
 }
 .afishi-right-opisanie {
   display: flex;
